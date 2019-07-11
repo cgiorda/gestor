@@ -1,0 +1,22 @@
+<div class="container">
+  <form [formGroup] = "formAbmCliente">
+    Nombre: <input 
+    [class.is-invalid] = "formAbmCliente.get('name').touched && formAbmCliente.get('name').invalid"
+    type="text" 
+    class="form-control" 
+    formControlName = "name">
+    CUIT: <input 
+    [class.is-invalid] = "formAbmCliente.get('cuit').touched && formAbmCliente.get('cuit').invalid"
+    type="text" 
+    class="form-control" 
+    formControlName = "cuit">
+  </form>
+  {{ formAbmCliente.value | json }}
+</div>
+<div class="container">
+  <mensaje>
+    <h1>Este es un mensaje nuevo</h1>
+    <button class="btn btn-primary">Salir</button>
+    <p>Aca va un gran mensaje descriptivo enviado desde el componente</p>
+  </mensaje>
+</div>

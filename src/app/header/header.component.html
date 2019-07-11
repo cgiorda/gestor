@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <ul>
+            <li *ngFor="let item of datos">
+                <h2>
+                    <a [routerLink]="item.url">{{item.nombre}}</a>
+                </h2>
+            </li>
+            <li>
+                <h2>
+                    <a [routerLink]="['/AbmCliente', 100]">Con Parametro</a>
+                </h2>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
